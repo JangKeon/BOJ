@@ -10,8 +10,27 @@ int main() {
     scanf("%d", &T);
     for (int i = 0; i < T; i++) {
         scanf("%d %d %d", &H, &W, &N);
-
+        if (N % H == 0) {
+            W = N / H;
+            if (W < 10) {
+                printf("%d%02d\n", H, W);
+            }
+            else {
+                printf("%d%d\n", H, W);
+            }
+        }
+        else {
+            W = N / H + 1;
+            H = N % H;
+            if (W < 10) {
+                printf("%d%02d\n", H, W);
+            }
+            else {
+                printf("%d%d\n", H, W);
+            }
+        }
+        
     }
-    printf("%d", fac(4));
+    
     return 0;
 }
