@@ -24,7 +24,7 @@ int main() {
 				arr[i][a] = arr[i - 1][a] + arr[i][a - 1];
 			}
 		}
-		std::cout << arr[K][N - 1] << "j\";
+		std::cout << arr[K][N - 1] << "\n";
 		printf("%d\n", arr[K][N - 1]);
 		
 	}
