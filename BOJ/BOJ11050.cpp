@@ -11,7 +11,7 @@ int fac(int n) {
     }
     return result;
 }
-
+ 
 int main() {
     int N = 0, K = 0;
     int result = 0;
