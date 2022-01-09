@@ -1,26 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
+
 #include <iostream>
-#include <string.h>
+#include <string>
+using namespace std;
 int main() {
-	char s[5] = "";
+	string s;
 	while (1) {
-		char s[5] = "";
-		int count = 0, flag = 0;
+		int flag = 0;
 		std::cin >> s;
-		if (strcmp(s, "0") == 0) {
-			exit(0);
+		if (s == "0") {
+			break;
 		}
-		for (int j = 0; j < (strlen(s) / 2) - 1; j++) {
-			if (s[j] == s[strlen(s) - 1 - j]) {
-				count++;
+		for (int i = 0; i < s.size() / 2; i++) {
+			if (s[i] != s[s.size() - 1 - i]) {
+				std::cout << "no\n";
+				flag = 1;
+				break;
 			}
 		}
-		if (count == (strlen(s) / 2) - 1) {
+		if (!flag) {
 			std::cout << "yes\n";
-		}
-		else {
-			std::cout << "no\n";
 		}
 	}
 	return 0;
