@@ -45,10 +45,8 @@
     <ClCompile Include="StockSale.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\..\..\Downloads\sample_input.txt">
+    <ClCompile Include="BOJ1181.cpp">
       <Filter>소스 파일</Filter>
-    </Text>
+    </ClCompile>
   </ItemGroup>
 </Project>
