@@ -3,7 +3,6 @@
 #endif
 
 #include <stdio.h>
-#include <iostream>
 #define CMD_INIT 1
 #define CMD_BUY 2
 #define CMD_SELL 3
