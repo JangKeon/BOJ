@@ -57,5 +57,11 @@
     <ClCompile Include="BOJ2751.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="숫자 카드2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ2609.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
