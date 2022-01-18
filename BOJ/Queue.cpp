@@ -8,7 +8,7 @@ int rear_num = -1;
 
 int size() {
 	int n;
-	if (front_num == -1 || rear_num == -1 || front_num > rear_num) {
+	if ((front_num == -1 && rear_num == -1) || front_num > rear_num) {
 		n = 0;
 	}
 	else {
@@ -93,6 +93,8 @@ int main() {
 		}
 		else if (func == "front") {
 			front(Queue);
+
+
 		}
 		else if (func == "back") {
 			back(Queue);
