@@ -6,19 +6,34 @@ using namespace std;
 int front_num = -1;
 int rear_num = -1;
 
-int size() {
-	int n;
-	if ((front_num == -1 && rear_num == -1) || front_num > rear_num) {
-		n = 0;
+void push(int *arr, int num) {
+	if (front_num == -1) {	// 정수가 없을 때
+		front_num++;
+		rear_num++;
 	}
-	else {
-		n = rear_num - front_num + 1;
+	else {	// 정수가 있을 때
+		rear_num++;
 	}
-	return n;
+	arr[rear_num] = num;
 }
 
-void print_size() {
-	if (front_num == -1 || rear_num == -1 || front_num > rear_num) {
+void pop(int* arr) {
+	if (front_num == -1) {	// 정수가 아예 없을 때
+		printf("-1\n");
+	}
+	else if (front_num == rear_num) {	// 정수가 하나 있을 때
+		printf("%d\n", arr[front_num]);
+		front_num = -1;
+		rear_num = -1;
+	}
+	else {	// 정수가 여러 개 있을 때
+		printf("%d\n", arr[front_num]);
+		front_num++;
+	}
+}
+
+void size() {
+	if (front_num == -1) {
 		printf("0\n");
 	}
 	else {
@@ -26,47 +41,25 @@ void print_size() {
 	}
 }
 
-void push(int *arr, int num) {
-	if (size() == 0) {
-		front_num = 0;
-		rear_num = 0;
-		arr[rear_num] = num;
-	}
-	else {
-		rear_num++;
-		arr[rear_num] = num;
-	}
-}
-
-void pop(int* arr) {
-	if (size() == 0) {
-		front_num = -1;
-		rear_num = -1;
-		printf("-1\n");
-	}
-	else {
-		printf("%d\n", arr[front_num]);
-		front_num++;
-	}
-}
-
 void empty() {
-	if (size() == 0) {
+	if (front_num == -1) {
 		printf("1\n");
 	}
-	else printf("0\n");
+	else {
+		printf("0\n");
+	}
 }
 
 void front(int *arr) {
-	if (size() == 0) {
+	if (front_num == -1) {
 		printf("-1\n");
 	}
 	else printf("%d\n", arr[front_num]);
 }
 
 void back(int *arr) {
-	if (size() == 0) {
-		printf("1\n");
+	if (front_num == -1) {
+		printf("-1\n");
 	}
 	else printf("%d\n", arr[rear_num]);
 }
@@ -86,15 +79,13 @@ int main() {
 			pop(Queue);
 		}
 		else if (func == "size") {
-			print_size();
+			size();
 		}
 		else if (func == "empty") {
 			empty();
 		}
 		else if (func == "front") {
 			front(Queue);
-
-
 		}
 		else if (func == "back") {
 			back(Queue);
