@@ -1,7 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <queue>
-#include <algorithm>
 using namespace std;
 #pragma warning(disable:4996)
 
@@ -73,5 +70,10 @@ int main() {
 		}
 	}
 	cout << result << '\n';
+	for (int i = 0; i < N; i++) {
+		free(arr[i]);
+	}
+	free(arr);
+
 	return 0;
 }
