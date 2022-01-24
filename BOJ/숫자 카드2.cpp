@@ -5,7 +5,7 @@
 using namespace std;
 #pragma warning(disable:4996)
 
-int main() {
+int main(void) {
 	vector <int> vec;
 	int N, num, M;
 	scanf("%d", &N);
@@ -15,10 +15,10 @@ int main() {
 	}
 	sort(vec.begin(), vec.end());
 	scanf("%d", &M);
+	int result;
 	for (int i = 0; i < M; i++) {
 		scanf("%d", &num);
-		if (binary_search(vec.begin(), vec.end(), num)) {
-			
-		}
+		result = upper_bound(vec.begin(), vec.end(), num) - lower_bound(vec.begin(), vec.end(), num);
+		cout << result << ' ';
 	}
 }
