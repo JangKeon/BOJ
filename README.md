@@ -1,4 +1,6 @@
 # Algorithm
 My own study for Algorithm.
 
-Class 1 Essentials : 1000 1001 1008 1330 2438 2557 2562 2675 2739 2753 2884 2920 8958 9498 10818 10869 10950 10951 10952 11654 11720 14681 15596 (Finished: ~21/12/31)
+Class 1 Essentials  (Finished: ~21/12/31)
+
+Class 2 Essentials (Finished: ~22/01/24)
