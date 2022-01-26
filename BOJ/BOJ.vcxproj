@@ -24,6 +24,7 @@
     <ProjectGuid>{4bc31dd0-9885-47ce-8148-f8c68ba52e3f}</ProjectGuid>
     <RootNamespace>BOJ</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>BOJ_Class2</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
