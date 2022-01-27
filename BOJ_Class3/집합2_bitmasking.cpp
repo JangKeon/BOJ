@@ -5,8 +5,6 @@ using namespace std;
 #pragma warning(disable:4996)
 
 int main(void) {
-	ios_base::sync_with_stdio(0);
-	cin.tie(0); cout.tie(0);
 	bool arr[21] = { false, };
 	int N, num;
 	string func;
@@ -30,10 +28,7 @@ int main(void) {
 		}
 		else if (func == "toggle") {
 			cin >> num;
-			if (arr[num]) {
-				arr[num] = false;
-			}
-			else arr[num] = true;
+			arr[num] ^= 1;
 		}
 		else if (func == "all") {
 			memset(arr, true, sizeof(arr));
