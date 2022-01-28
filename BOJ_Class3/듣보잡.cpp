@@ -28,6 +28,7 @@ int main(void) {
 		if (Names[i] == Names[i - 1]) {
 			Result.push_back(Names[i]);
 		}
+
 	}
 
 	cout << Result.size() << '\n';
