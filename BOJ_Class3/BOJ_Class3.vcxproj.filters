@@ -51,5 +51,11 @@
     <ClCompile Include="최소 힙.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="색종이 만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="좌표 압축.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
