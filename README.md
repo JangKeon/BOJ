@@ -7,7 +7,7 @@
 Solved.ac의 Class별 문제 정복을 목표로 합니다
 
 [![Solved.ac
-Profile](http://mazassumnida.wtf/api/generate_badge?boj=r2god7k)](https://solved.ac/r2god7k)
+Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=r2god7k)](https://solved.ac/r2god7k)
 
 
 
