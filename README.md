@@ -6,6 +6,11 @@
 ## BOJ (백준)
 Solved.ac의 Class별 문제 정복을 목표로 합니다
 
+[![Solved.ac
+Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=r2god7k)](https://solved.ac/r2god7k)
+
+
+
 ### Rule
 - 문제 출처는 [백준](https://www.acmicpc.net/)입니다
 - 문제 풀이 순서는 각 클래스의 난이도 순입니다
