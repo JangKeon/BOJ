@@ -40,7 +40,6 @@ int main(void) {
 				}
 			}
 		}
-
 		cout << result << '\n';
 		memset(board, 0, sizeof(board));
 		memset(visited, 0, sizeof(visited));
