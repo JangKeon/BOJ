@@ -34,7 +34,7 @@ int main(void) {
 
 		for (int i = 1; i <= M ; i++) {
 			for (int j = 1; j <= N ; j++) {
-				if (board[i][j]  && !visited[i][j]) {
+				if (board[i][j] && !visited[i][j]) {
 					dfs(i, j);
 					result++;
 				}
