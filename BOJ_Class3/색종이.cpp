@@ -14,7 +14,6 @@ void Cut(int x, int y, int N) {
 			}
 		}
 	}
-
 	if (check) {
 		Cut(x, y, N / 2);
 		Cut(x, y + (N / 2), N / 2);
