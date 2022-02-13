@@ -37,4 +37,5 @@ int main(void) {
 	}
 	Cut(0, 0, N);
 	cout << paper[0] << ' ' << paper[1];
+
 }
