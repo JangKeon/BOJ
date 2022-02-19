@@ -7,48 +7,31 @@ typedef struct tomato {
 	int x;
 	int y;
 };
+
 int map[1002][1002];
 queue <tomato> que;
-bool check[1002][1002] = { false, };
 int N, M, num, res = 0;
 
-void bfs(int x, int y) {
-	que.push(map[x][y]);
-	check[x][y] = true;
+int dx[4] = { 0, 1, 0, -1 };
+int dy[4] = { 1, 0, -1, 0 };
+
+void bfs() {
+	int nx, ny;
 	while (!que.empty()) {
-		int a = que.front();
+		int x = que.front().x;
+		int y = que.front().y;
 		que.pop();
-		if (a == 1) {
-			if (!check[x - 1][y]) {
-				if (map[x - 1][y] == 0) {
-					map[x - 1][y] = 1;
-					que.push(map[x - 1][y]);
-					check[x - 1][y] = true;
-				}
+		for (int i = 0; i < 4; i++) {
+			nx = x + dx[i];
+			ny = y + dy[i];
+			if (nx < 0 || nx >= N || ny < 0 || ny >= M) {
+				continue;
 			}
-			if (!check[x + 1][y]) {
-				if (map[x + 1][y] == 0) {
-					map[x + 1][y] = 1;
-					que.push(map[x + 1][y]);
-					check[x + 1][y] = true;
-				}
+			if (map[nx][ny]) {
+				continue;
 			}
-
-			if (!check[x][y + 1]) {
-				if (map[x][y + 1] == 0) {
-					map[x][y + 1] = 1;
-					que.push(map[x][y + 1]);
-					check[x][y + 1] = true;
-				}
-			}
-
-			if (!check[x][y - 1]) {
-				if (map[x][y - 1] == 0) {
-					map[x][y - 1] = 1;
-					que.push(map[x][y - 1]);
-					check[x][y - 1] = true;
-				}
-			}
+			map[nx][ny] = map[x][y] + 1;
+			que.push({ nx, ny });
 		}
 	}
 }
@@ -58,18 +41,26 @@ int main(void) {
 	cin.tie(0); cout.tie(0);
 
 	cin >> M >> N;
-	for (int i = 1; i <= N; i++) {
-		for (int j = 1; j <= M; j++) {
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < M; j++) {
 			cin >> map[i][j];
-		}
-	}
-
-	for (int i = 1; i <= N; i++) {
-		for (int j = 1; j <= M; j++) {
-			if (!check[i][j]) {
-				bfs(i, j);
+			if (map[i][j] == 1) {
+				que.push({ i, j });
 			}
 		}
 	}
-	cout << res;
+	bfs();
+	int res = 0;
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < M; j++) {
+			if (map[i][j] == 0) {
+				cout << "-1\n";
+				return 0;
+			}
+			if (res < map[i][j]) {
+				res = map[i][j];
+			}
+		}
+	}
+	cout << res - 1;
 }
