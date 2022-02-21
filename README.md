@@ -21,7 +21,7 @@ Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=r2god7k)](https://sol
 ## Progress
 - [x] [Class 1](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%201)
 - [x] [Class 2](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%202)
-- [ ] [Class 3](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%203) (current)
-- [ ] [Class 4](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%204) 
+- [x] [Class 3](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%203) 
+- [ ] [Class 4](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%204) (current)
 - [ ] [Class 5](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%205) 
 - [ ] [Class 6](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%206)
