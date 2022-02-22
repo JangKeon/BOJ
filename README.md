@@ -14,7 +14,7 @@ Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=r2god7k)](https://sol
 ## Rule
 - 문제 출처는 [백준](https://www.acmicpc.net/)입니다
 - 문제 풀이 순서는 각 클래스의 난이도 순입니다
-- 문제의 풀이전략을 각 폴더의 README.md에 간략하게 기록합니다 (Class1,2 제외)
+- 문제의 풀이방법을 각 폴더의 README.md에 간략하게 기록합니다 (Class1,2 제외)
 - 사용언어는 <b>C++</b> 입니다
 - 난이도와 Class 별 정렬 방식은 [solved.ac](https://solved.ac/)의 기준을 적용하였습니다
 
