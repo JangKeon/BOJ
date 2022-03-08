@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="가장 긴 증가하는 부분 수열.cpp" />
     <ClCompile Include="조합.cpp" />
+    <ClCompile Include="트리의 부모 찾기.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
