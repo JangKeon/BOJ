@@ -3,7 +3,6 @@
 #define Max_Size 10
 using namespace std;
 
-int queue[Max_Size];
 int n_node = 0;
 
 struct node {
