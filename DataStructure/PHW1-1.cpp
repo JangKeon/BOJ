@@ -98,8 +98,7 @@ void run_dequeue(int arr[], int num) {
 
 int main(void) {
 	int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-	run_enqueue(numbers, 5);
-	run_dequeue(numbers, 2);
 	run_enqueue(numbers, 3);
-	run_dequeue(numbers, 4);
+	run_dequeue(numbers, 5);
+
 }
