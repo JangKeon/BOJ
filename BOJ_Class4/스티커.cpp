@@ -2,29 +2,38 @@
 #include <vector>
 using namespace std;
 
-int dp[2][100001], score[2][100001];
-
 int main(void) {
 	int T, n, num;
+	int dp[100001], location[100001];
+	vector <int> score[2];
 	cin >> T;
 	for (int i = 0; i < T; i++) {
-		memset(score, 0, sizeof(score));
-		memset(dp, 0, sizeof(dp));
 		cin >> n;
 		for (int i = 0; i < 2; i++) {
 			for (int j = 0; j < n; j++) {
-				cin >> score[i][j];
+				cin >> num;
+				score[i].push_back(num);
 			}
 		}
-		dp[0][0] = score[0][0];
-		dp[1][0] = score[1][0];
-		dp[0][1] = score[1][0] + score[0][1];
-		dp[1][1] = score[0][0] + score[1][1];
-
-		for (int i = 2; i < n; i++) {
-			dp[0][i] = max(dp[1][i - 2], dp[1][i - 1]) + score[0][i];
-			dp[1][i] = max(dp[0][i - 2], dp[0][i - 1]) + score[1][i];
+		dp[1] = max(score[0][0], score[1][0]); // index 저장 필요
+		if (dp[1] == score[0][0]) {
+			location[1] = 0;
 		}
-		cout << max(dp[0][n - 1], dp[1][n - 1]) << '\n';
+		else location[1] = 1;
+		dp[2] = max(score[0][0] + score[1][1], score[0][1] + score[1][0]);
+		if (dp[2] == score[0][0] + score[1][1]) {
+			location[2] = 1;
+		}
+		else location[2] = 0;
+		for (int i = 3; i <= 100000; i++) {
+			int a = dp[i - 2] + score[~location[i - 1]][i - 1] + score[location[i - 1]][i];
+			int b = dp[i - 2] + score[~location[i - 1]][i];
+			dp[n] = max(a, b);
+			if (dp[n] == dp[n - 2] + score[~location[i - 1]][n]) {
+				location[i] = ~location[i - 2];
+			}
+			else location[i] = location[i - 2];
+		}
+		cout << dp[n];
 	}
 }
