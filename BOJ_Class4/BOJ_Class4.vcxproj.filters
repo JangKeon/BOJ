@@ -45,5 +45,8 @@
     <ClCompile Include="스티커+.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="후위 표기식.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
