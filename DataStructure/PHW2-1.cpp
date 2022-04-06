@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdlib.h>
-#define Max_Size 100
 using namespace std;
 
 struct node {
@@ -9,14 +8,12 @@ struct node {
 };
 
 struct node* head = NULL;
-int n_node = 0;
 
 void push(int x) {
 	struct node* temp = (struct node*)malloc(sizeof(struct node));
 	temp->data = x;
 	temp->link = head;
 	head = temp;
-	n_node++;
 }
 
 void pop() {
@@ -25,7 +22,6 @@ void pop() {
 	temp = head;
 	val = temp->data;
 	head = head->link;
-	n_node--;
 	free(temp);
 }
 
@@ -47,5 +43,4 @@ int main(void) {
 		printf("%d ", head->data);
 		head = head->link;
 	}
-	
 }
