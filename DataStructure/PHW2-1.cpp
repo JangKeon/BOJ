@@ -27,6 +27,7 @@ void pop() {
 
 int main(void) {
 	int number;
+	printf("Enter the number you want to convert.\n");
 	scanf_s("%d", &number);
 	while (number > 0) {
 		if (number % 2 == 0) {
