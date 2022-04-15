@@ -363,3 +363,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /BOJ_Class3/색종이 만들기.cpp
+/BOJ_Class4/최단거리.cpp
