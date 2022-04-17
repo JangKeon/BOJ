@@ -57,10 +57,10 @@
     <ClCompile Include="LCS.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="최단거리.cpp">
+    <ClCompile Include="동전1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="동전1.cpp">
+    <ClCompile Include="다익스트라.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int n, res = 0;
+int n, dist = 0;
 int board[15];
 
 void NQueens(int col) {
 	if (col == n) {
-		res++;
+		dist++;
 	}
 	for (int i = 0; i < n; i++) {
 		bool check = true;
@@ -30,5 +30,5 @@ int main(void) {
 		board[0] = i;
 		NQueens(1);
 	}
-	cout << res;
+	cout << dist;
 }
