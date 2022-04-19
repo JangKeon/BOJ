@@ -111,5 +111,8 @@
     <ClCompile Include="3의 배수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="셀프 넘버.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
