@@ -23,5 +23,6 @@ int main(void) {
 		else { count = count + (vec[i] / C) + 1; }
 	}
 	count += N;
+
 	cout << count;
 }
