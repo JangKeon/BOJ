@@ -4,13 +4,6 @@
 #include <string.h>
 using namespace std;
 
-bool Cmp (int a, int b) {
-	if (a > b) {
-		return a;
-	}
-}
-
-
 int dx[8] = { 0, -1, -1, -1, 0, 1, 1, 1 };
 int dy[8] = { -1, -1, 0, 1, 1, 1, 0, -1 };
 int map[50][50];
@@ -72,17 +65,17 @@ void move_cloud(int dir, int dis) {
 		cloud.push_back({ nx, ny });
 		visit[nx][ny] = 1;
 		cloud.pop_front();
-	}	
+	}
 }
 
 int main(void) {
-	cin >> N >> M; 
+	cin >> N >> M;
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 			cin >> map[i][j];
 		}
 	}
-	
+
 	int m, d;
 	for (int i = 0; i < M; i++) {
 		cin >> m >> d;
@@ -98,15 +91,15 @@ int main(void) {
 		int rotate_move = rotation.front().move;
 		int rotate_distance = rotation.front().distance;
 		move_cloud(rotate_move, rotate_distance);
-		
+
 		for (int i = 0; i < cloud.size(); i++) {
 			map[cloud[i].x][cloud[i].y]++;
 		}
-		
+
 		for (int i = 0; i < cloud.size(); i++) {
 			copy_water(cloud[i].x, cloud[i].y);
 		}
-		
+
 		cloud.clear();
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
