@@ -132,5 +132,8 @@
     <ClCompile Include="파도반 수열.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="가장 쉬운 문제를 찾는 문제.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
