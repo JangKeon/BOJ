@@ -2,23 +2,33 @@
 #include <vector>
 using namespace std;
 
-struct street {
-	int start;
-	int end;
-	int time;
-};
 
-vector <int> map[501];
-vector <street> way;
-int visit[501];
+vector <pair <pair <int, int>, int>> v;
+int dist[501];
 
-void dfs(int x) {
-	visit[x] = 1;
-	for (int i = 0; i < map[x].size(); i++) {
-		if (!visit[map[x][i]]) {
-			dfs(map[x][i]);
+void bellmanford(int n) {
+	for (int i = 0; i < n; i++) {
+		for (int pos = 0; pos < v.size(); pos++) {
+			int from = v[pos].first.first;
+			int to = v[pos].first.second;
+			int cost = v[pos].second;
+
+			if (dist[from] + cost < dist[to]) {
+				dist[to] = dist[from] + cost;
+			}
 		}
 	}
+	for (int pos = 0; pos < v.size(); pos++) {
+		int from = v[pos].first.first;
+		int to = v[pos].first.second;
+		int cost = v[pos].second;
+
+		if (dist[from] + cost < dist[to]) {
+			cout << "YES" << '\n';
+			return;
+		}
+	}
+	cout << "NO" << '\n';
 }
 
 int main(void) {
@@ -26,18 +36,23 @@ int main(void) {
 	cin >> T;
 
 	for (int a = 0; a < T; a++) {
-		int total = 0;
+		v.clear();
 		int N, M, W;
 		cin >> N >> M >> W;
+		for (int i = 0; i < N; i++) {
+			dist[i] = 987654321;
+		}
+		int S, E, T;
 		for (int i = 0; i < M; i++) {
-			int S, E, T;
 			cin >> S >> E >> T;
-			map[S].push_back(E);
-			way.push_back({ S, E, T });
+			v.push_back({ {S, E}, T });
+			v.push_back({ {E, S}, T });
 		}
 
-		for (int i = 0; i < 5; i++) {
-
+		for (int i = 0; i < W; i++) {
+			cin >> S >> E >> T;
+			v.push_back({ { S, E }, -T });
 		}
+		bellmanford(N);
 	}
 }
