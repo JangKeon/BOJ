@@ -81,7 +81,10 @@
     <ClCompile Include="플로이드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="곱셈.cpp">
+    <ClCompile Include="종이의 개수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="동전 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
