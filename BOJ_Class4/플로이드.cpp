@@ -12,7 +12,7 @@ void Floyd(int n) {
 
 void dfs(int x, int y) {
 	visit[x][y] = 1;
-
+	
 }
 
 int main(void) {
