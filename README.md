@@ -18,9 +18,9 @@ Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=r2god7k)](https://sol
 - 난이도와 Class 별 정렬 방식은 [solved.ac](https://solved.ac/)의 기준을 적용하였습니다
 
 ## Progress
-- [x] [Class 1](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%201)
-- [x] [Class 2](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%202)
-- [x] [Class 3](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%203) 
-- [ ] [Class 4](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%204) (current)
-- [ ] [Class 5](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%205) 
-- [ ] [Class 6](https://github.com/ashpurple/Algorithm-Study/tree/main/Class%206)
+- [x] [Class 1](https://github.com/JangKeon/BOJ/tree/master/BOJ)
+- [x] [Class 2](https://github.com/JangKeon/BOJ/tree/master/BOJ)
+- [x] [Class 3](https://github.com/JangKeon/BOJ/tree/master/BOJ_Class3) 
+- [ ] [Class 4](https://github.com/JangKeon/BOJ/tree/master/BOJ_Class4) (current)
+- [ ] [Class 5]() 
+- [ ] [Class 6]()
