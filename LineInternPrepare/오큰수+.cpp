@@ -8,7 +8,7 @@ int result[1000001];
 int main(void) {
 	ios::sync_with_stdio(0);
 	cin.tie(0); cout.tie(0);
-	
+
 	int N, num;
 	cin >> N;
 	vector <int> vec;
