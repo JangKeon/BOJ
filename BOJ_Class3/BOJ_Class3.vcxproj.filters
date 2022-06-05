@@ -141,5 +141,8 @@
     <ClCompile Include="올림픽.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="나는 친구가 적다.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
