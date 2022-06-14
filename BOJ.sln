@@ -14,6 +14,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SAMSUNG Intern Prepare", "S
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LineInternPrepare", "LineInternPrepare\LineInternPrepare.vcxproj", "{E474240D-D624-4B2B-A037-081A8844AB33}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SKTX", "SKTX\SKTX.vcxproj", "{B82CE61D-E5D9-4E6B-8128-C26C29FF2AA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -70,6 +72,14 @@ Global
 		{E474240D-D624-4B2B-A037-081A8844AB33}.Release|x64.Build.0 = Release|x64
 		{E474240D-D624-4B2B-A037-081A8844AB33}.Release|x86.ActiveCfg = Release|Win32
 		{E474240D-D624-4B2B-A037-081A8844AB33}.Release|x86.Build.0 = Release|Win32
+		{B82CE61D-E5D9-4E6B-8128-C26C29FF2AA0}.Debug|x64.ActiveCfg = Debug|x64
+		{B82CE61D-E5D9-4E6B-8128-C26C29FF2AA0}.Debug|x64.Build.0 = Debug|x64
+		{B82CE61D-E5D9-4E6B-8128-C26C29FF2AA0}.Debug|x86.ActiveCfg = Debug|Win32
+		{B82CE61D-E5D9-4E6B-8128-C26C29FF2AA0}.Debug|x86.Build.0 = Debug|Win32
+		{B82CE61D-E5D9-4E6B-8128-C26C29FF2AA0}.Release|x64.ActiveCfg = Release|x64
+		{B82CE61D-E5D9-4E6B-8128-C26C29FF2AA0}.Release|x64.Build.0 = Release|x64
+		{B82CE61D-E5D9-4E6B-8128-C26C29FF2AA0}.Release|x86.ActiveCfg = Release|Win32
+		{B82CE61D-E5D9-4E6B-8128-C26C29FF2AA0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
