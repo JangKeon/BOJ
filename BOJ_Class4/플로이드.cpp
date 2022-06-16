@@ -1,40 +1,47 @@
 #include <iostream>
 #include <vector>
+#include <string.h>
+#include <algorithm>
 using namespace std;
 
-vector < pair <pair<int, int>, int>> vec;
 int map[101][101];
-int visit[101][101];
-
-void Floyd(int n) {
-
-}
-
-void dfs(int x, int y) {
-	visit[x][y] = 1;
-	
-}
 
 int main(void) {
-	int N, M;
-	cin >> N >> M;
-	int	a, b, c;
-	for (int i = 0; i < M; i++) {
-		cin >> a >> b >> c;
-		vec.push_back({ {a, b},c });
-		map[a][b] = c;
+	fill(&map[0][0], &map[100][101], 987654321);
+
+	int	n, m;
+	cin >> n >> m;
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= n; j++) {
+			if (i == j) {
+				map[i][j] = 0;
+			}
+		}
 	}
 
-	for (int i = 1; i <= N; i++) {
-		Floyd(i);
+	int start, end, weight;
+	for (int i = 0; i < m; i++) {
+		cin >> start >> end >> weight;
+		map[start][end] = min(map[start][end], weight);
 	}
 
-	for (int i = 1; i <= N; i++) {
-		for (int j = 1; j <= N; j++) {
-			cout << map[i][j] << ' ';
+	for (int k = 1; k <= n; k++) {
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (map[i][k] + map[k][j] < map[i][j]) {
+					map[i][j] = map[i][k] + map[k][j];
+				}
+			}
+		}
+	}
+
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= n; j++) {
+			if (map[i][j] == 987654321) {
+				cout << 0 << ' ';
+			}
+			else cout << map[i][j] << ' ';
 		}
 		cout << '\n';
 	}
-
-
 }
