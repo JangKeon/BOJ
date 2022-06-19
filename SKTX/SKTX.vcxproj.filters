@@ -24,10 +24,10 @@
     <ClCompile Include="Test3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="소스.cpp">
+    <ClCompile Include="코테-경험1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="소스1.cpp">
+    <ClCompile Include="코테-경험2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
