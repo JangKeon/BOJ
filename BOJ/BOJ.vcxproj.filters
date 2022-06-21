@@ -156,5 +156,8 @@
     <ClCompile Include="성적 통계.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="쉽게 푸는 문제.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
