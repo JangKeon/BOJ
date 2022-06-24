@@ -10,57 +10,34 @@ struct point {
 	int y;
 };
 
-int dx[4] = { 1, 0, -1, 0 };
-int dy[4] = { 0, 1, 0, -1 };
+int dx[4] = { 0, 1, 0, -1 };
+int dy[4] = { 1, 0, -1, 0 };
 int N, M, R, K;
-char map[100][100];
-int visited[100][100];
-deque <point> sword;
+char map[101][101];
+int visited[101][101];
+vector <point> sword;
 struct point dest;
 queue <point> que;
-int point_x = 0, point_y = 0, result = 0;
+int cost[9];
+int result[6];
 
-int Min(deque <point> a) {
-	int Min = 9999;
-	for (int i = 0; i < a.size(); i++) {
-		if (visited[a[i].x][a[i].y] < Min) {
-			Min = visited[a[i].x][a[i].y];
-			point_x = a[i].x;	point_y = a[i].y;
-		}
-	}
-	cout << "X : " << point_x << "Y : " << point_y << '\n';
-	for (int i = 0; i < a.size(); i++) {
-		if (visited[a[i].x][a[i].y] == Min) {
-			sword.pop_front();
-			sword.push_back({ a[i].x, a[i].y });
-		}
-		else {
-			sword.pop_front();
-		}
-	}
-	return Min;
-}
-
-void bfs_nosword() {
+void bfs() {
 	int nx, ny;
 	while (!que.empty()) {
-		while (!que.empty()) {
-			int x = que.front().x;
-			int y = que.front().y;
-			visited[x][y]++;
-			que.pop();
-			for (int i = 0; i < 4; i++) {
-				nx = x + dx[i];
-				ny = y + dy[i];
-				if (nx < 0 || nx >= N || ny < 0 || ny >= M) {
-					continue;
-				}
-				if (map[nx][ny] == 'X' || visited[nx][ny]) {
-					continue;
-				}
-				visited[nx][ny] = visited[x][y] + 1;
-				que.push({ nx, ny });
+		int x = que.front().x;
+		int y = que.front().y;
+		que.pop();
+		for (int i = 0; i < 4; i++) {
+			nx = x + dx[i];
+			ny = y + dy[i];
+			if (nx < 1 || nx > N || ny < 1 || ny > M) {
+				continue;
 			}
+			if (map[nx][ny] == 'X' || visited[nx][ny]) {
+				continue;
+			}
+			visited[nx][ny] = visited[x][y] + 1;
+			que.push({ nx, ny });
 		}
 	}
 }
@@ -68,14 +45,23 @@ void bfs_nosword() {
 int main(void) {
 	int T;
 	cin >> T;
+	for (int i = 0; i < 3; i++) {
+		sword.push_back({ 0, 0 });
+	}
 	for (int u = 0; u < T; u++) {
 		cin >> N >> M >> R >> K;
-		result = 0;
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < M; j++) {
+		memset(visited, 0, sizeof(visited));
+		for (int i = 1; i <= N; i++) {
+			for (int j = 1; j <= M; j++) {
 				cin >> map[i][j];
-				if (map[i][j] == 'A' || map[i][j] == 'B' || map[i][j] == 'C') {
-					sword.push_back({ i,j });
+				if (map[i][j] == 'A') {
+					sword[0].x = i; sword[0].y = j;
+				}
+				if (map[i][j] == 'B') {
+					sword[1].x = i; sword[1].y = j;
+				}
+				if (map[i][j] == 'C') {
+					sword[2].x = i; sword[2].y = j;
 				}
 				if (map[i][j] == 'S') {
 					dest.x = i; dest.y = j;
@@ -83,17 +69,44 @@ int main(void) {
 			}
 		}
 
-		que.push({ R, K });
-		bfs_nosword();
-		result += Min(sword);
+		que.push({ R , K });
+		visited[R][K] = 1;
+		bfs();
+		for (int i = 0; i < 3; i++) {
+			cost[i] = visited[sword[i].x][sword[i].y] - 1;
+		}
+
 		memset(visited, 0, sizeof(visited));
-		que.push({ point_x, point_y });
-		bfs_nosword();
-		result += Min(sword);
+		que.push({ sword[0].x, sword[0].y });
+		visited[sword[0].x][sword[0].y] = 1;
+		bfs();
+		for (int i = 3; i < 5; i++) {
+			cost[i] = visited[sword[i - 2].x][sword[i - 2].y] - 1;
+		}
+
 		memset(visited, 0, sizeof(visited));
-		que.push({ point_x, point_y });
-		bfs_nosword();
-		result += Min(sword);
-		cout << result;
+		que.push({ sword[1].x, sword[1].y });
+		visited[sword[1].x][sword[1].y] = 1;
+		bfs();
+		cost[5] = visited[sword[2].x][sword[2].y] - 1;
+
+		for (int i = 6; i < 9; i++) {
+			cost[i] = abs(dest.x - sword[i - 6].x) + abs(dest.y - sword[i - 6].y);
+		}
+
+		result[0] = cost[0] + cost[3] + cost[5] + cost[8];
+		result[1] = cost[0] + cost[4] + cost[5] + cost[7];
+		result[2] = cost[1] + cost[3] + cost[4] + cost[8];
+		result[3] = cost[1] + cost[4] + cost[5] + cost[6];
+		result[4] = cost[2] + cost[3] + cost[4] + cost[7];
+		result[5] = cost[2] + cost[3] + cost[5] + cost[6];
+
+		int Min = 999999;
+		for (int i = 0; i < 6; i++) {
+			if (Min > result[i]) {
+				Min = result[i];
+			}
+		}
+		cout << "#" << u + 1 << ' ' << Min << '\n';
 	}
 }
