@@ -150,5 +150,8 @@
     <ClCompile Include="숫자 카드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="다리놓기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
