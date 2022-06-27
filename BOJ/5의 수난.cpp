@@ -10,6 +10,5 @@ int main(void) {
 		scanf_s("%1d", &num);
 		result += pow(num, 5);
 	}
-
 	cout << result;
 }
