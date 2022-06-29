@@ -13,7 +13,7 @@ void dfs(int x, int y) {
 
 	for (int i = 0; i < 4; i++) {
 		int ax = x + dx[i];
-		int ay = y + dy[i];
+		int ay = y + dy[i];		
 		if (!board[ax][ay] || visited[ax][ay]) {
 			continue;
 		}
