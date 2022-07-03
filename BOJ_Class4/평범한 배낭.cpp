@@ -3,14 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-bool compare(pair<int, int> vec1, pair<int, int> vec2) {
-	if (vec1.second == vec2.second) {
-		return vec1.first > vec2.first;
-	}
-	else return vec1.second < vec2.second;
-}
-
-int dp[100][100000];
+int dp[101][100001];
 
 int main(void) {
 	int N, K, W, V;
@@ -20,7 +13,17 @@ int main(void) {
 		cin >> W >> V;
 		vec.push_back(make_pair(W, V));
 	}
-	sort(vec.begin(), vec.end(), compare);
-
-	cout << vec[1].first << " " << vec[1].second << '\n';
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j <= K; j++) {
+			if (i == 0) {
+				if (vec[i].first <= j)	dp[i][j] = vec[i].second;
+				continue;
+			}
+			if (vec[i].first <= j) {
+				dp[i][j] = max(dp[i - 1][j], vec[i].second + dp[i - 1][j - vec[i].first]);
+			}
+			else dp[i][j] = dp[i - 1][j];
+		}
+	}
+	cout << dp[N - 1][K] << '\n';
 }
