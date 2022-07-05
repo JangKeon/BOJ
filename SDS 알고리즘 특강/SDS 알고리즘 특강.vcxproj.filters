@@ -33,5 +33,17 @@
     <ClCompile Include="고스택+.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="수들의 합2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="나무 자르기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="피보나치수3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="합이 0인 네 정수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
