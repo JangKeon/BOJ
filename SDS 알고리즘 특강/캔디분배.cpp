@@ -12,7 +12,7 @@ int gcd(int a, int b) {
 
 int Euclid(int a, int b) {
 	
-
+	
 }
 
 int main(void) {
