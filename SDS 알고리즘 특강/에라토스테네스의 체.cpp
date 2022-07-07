@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <vector>
 using namespace std;
 
@@ -15,7 +15,7 @@ int main(void) {
 		if (arr[i] == 0) {
 			continue;
 		}
-		for (int j = i; j <= N; j+=i) {
+		for (int j = i; j <= N; j += i) {
 			if (arr[j]) {
 				arr[j] = 0;
 				K--;
@@ -25,7 +25,6 @@ int main(void) {
 				}
 			}
 		}
-		
 	}
 
 }
