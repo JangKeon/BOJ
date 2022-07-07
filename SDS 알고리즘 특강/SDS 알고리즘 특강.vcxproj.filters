@@ -48,5 +48,14 @@
     <ClCompile Include="가운데를 말해요.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="분수 합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="캔디분배.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="에라토스테네스의 체.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
