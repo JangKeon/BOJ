@@ -57,5 +57,11 @@
     <ClCompile Include="에라토스테네스의 체.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="집합의 표현.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="줄 세우기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
