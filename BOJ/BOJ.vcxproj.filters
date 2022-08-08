@@ -201,5 +201,8 @@
     <ClCompile Include="점수 집계.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="대표값2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
