@@ -204,5 +204,8 @@
     <ClCompile Include="대표값2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="별찍기-20.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
