@@ -16,6 +16,14 @@ int dx[4] = { 1, 0, 0, -1 };
 int dy[4] = { 0, 1, -1, 0 };
 int N, normal = 0, strange = 0;	
 
+void dfs_right(int x, int y) {
+
+}
+
+void dfs_wrong() {
+
+}
+
 void bfs_right() {
 	while (!que.empty()) {
 		int ax = que.front().x;
