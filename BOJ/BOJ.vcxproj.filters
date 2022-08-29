@@ -234,5 +234,8 @@
     <ClCompile Include="과자.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="수 정렬하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
