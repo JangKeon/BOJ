@@ -240,5 +240,8 @@
     <ClCompile Include="고수하수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="첼시.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
