@@ -9,7 +9,7 @@ Solved.ac의 Class별 문제 정복을 목표로 합니다
 [![Solved.ac
 Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=r2god7k)](https://solved.ac/r2god7k)
 
-
+- 2022.09.17 부터 카카오 엔터프라이즈 아카데미로 인해 문제풀이를 잠시 중단합니다.
 
 ## Rule
 - 문제 출처는 [백준](https://www.acmicpc.net/)입니다
