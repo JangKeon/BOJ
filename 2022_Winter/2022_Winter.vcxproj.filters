@@ -27,5 +27,8 @@
     <ClCompile Include="로프.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="예산.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
