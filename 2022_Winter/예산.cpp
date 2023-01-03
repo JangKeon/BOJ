@@ -18,6 +18,6 @@ int main(void) {
 		cout << vec[N - 1] << '\n';
 	}
 	else {
-
+		 
 	}
 }
