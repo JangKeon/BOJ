@@ -30,5 +30,8 @@
     <ClCompile Include="예산.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="주사위 게임.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
