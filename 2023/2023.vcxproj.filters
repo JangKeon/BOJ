@@ -39,5 +39,8 @@
     <ClCompile Include="숫자 카드2.cpp">
       <Filter>소스 파일\Class2</Filter>
     </ClCompile>
+    <ClCompile Include="1로 만들기.cpp">
+      <Filter>소스 파일\Class2</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
