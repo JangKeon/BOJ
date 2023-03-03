@@ -27,5 +27,8 @@
     <ClCompile Include="단어 정렬.cpp">
       <Filter>소스 파일\Class2</Filter>
     </ClCompile>
+    <ClCompile Include="수 찾기.cpp">
+      <Filter>소스 파일\Class2</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
