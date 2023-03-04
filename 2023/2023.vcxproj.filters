@@ -16,6 +16,9 @@
     <Filter Include="소스 파일\Class2">
       <UniqueIdentifier>{c73290b2-f75a-4ef6-9cc0-38540cc043a1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Class3">
+      <UniqueIdentifier>{3afdfb71-3198-41ab-ad07-197d3b5a6854}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="유기농배추.cpp">
@@ -41,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="1로 만들기.cpp">
       <Filter>소스 파일\Class2</Filter>
+    </ClCompile>
+    <ClCompile Include="유기농 배추.cpp">
+      <Filter>소스 파일\Class3</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
