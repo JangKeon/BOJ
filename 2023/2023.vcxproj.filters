@@ -51,5 +51,8 @@
     <ClCompile Include="최대 힙.cpp">
       <Filter>소스 파일\Class3</Filter>
     </ClCompile>
+    <ClCompile Include="숫자 문자열과 영단어.cpp">
+      <Filter>소스 파일\Class3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
