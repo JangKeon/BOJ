@@ -57,5 +57,8 @@
     <ClCompile Include="거리두기 확인하기.cpp">
       <Filter>소스 파일\Class3</Filter>
     </ClCompile>
+    <ClCompile Include="토마토.cpp">
+      <Filter>소스 파일\Class3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
