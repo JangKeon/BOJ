@@ -75,5 +75,8 @@
     <ClCompile Include="좌표 압축.cpp">
       <Filter>소스 파일\Class3</Filter>
     </ClCompile>
+    <ClCompile Include="로또의 최고순위와 최저순위.cpp">
+      <Filter>소스 파일\Class3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
