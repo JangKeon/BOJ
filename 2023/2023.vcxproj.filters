@@ -72,5 +72,8 @@
     <ClCompile Include="숨바꼭질.cpp">
       <Filter>소스 파일\Class3</Filter>
     </ClCompile>
+    <ClCompile Include="좌표 압축.cpp">
+      <Filter>소스 파일\Class3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
