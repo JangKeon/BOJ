@@ -49,3 +49,20 @@ vector<int> solution(string today, vector<string> terms, vector<string> privacie
 
     return answer;
 }
+
+int main()
+{
+    string line = "Tokenizing a string with stringstream";
+
+    vector<string> words;
+    stringstream sstream(line);
+    string word;
+
+    while (getline(sstream, word, ' '))
+    {
+        words.push_back(word);
+    }
+
+    for (int i = 0; i < words.size(); i++)
+        cout << words[i] << endl;
+}
