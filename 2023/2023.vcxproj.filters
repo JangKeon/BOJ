@@ -78,5 +78,8 @@
     <ClCompile Include="로또의 최고순위와 최저순위.cpp">
       <Filter>소스 파일\Class3</Filter>
     </ClCompile>
+    <ClCompile Include="개인정보 수집 유효기간.cpp">
+      <Filter>소스 파일\Class3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
