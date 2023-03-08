@@ -99,5 +99,8 @@
     <ClCompile Include="순열.cpp">
       <Filter>소스 파일\Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="자주 나오는 DP.cpp">
+      <Filter>소스 파일\Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
