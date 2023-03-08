@@ -19,6 +19,12 @@
     <Filter Include="소스 파일\Class3">
       <UniqueIdentifier>{3afdfb71-3198-41ab-ad07-197d3b5a6854}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Kakao Enterprise">
+      <UniqueIdentifier>{ab4b714f-3f44-4ee1-b6d6-de1cc2b7d02a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Algorithms">
+      <UniqueIdentifier>{84d22d00-15da-42c0-888c-9f291b369910}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="유기농배추.cpp">
@@ -89,6 +95,9 @@
     </ClCompile>
     <ClCompile Include="신규 아이디 추천.cpp">
       <Filter>소스 파일\Class3</Filter>
+    </ClCompile>
+    <ClCompile Include="순열.cpp">
+      <Filter>소스 파일\Algorithms</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
