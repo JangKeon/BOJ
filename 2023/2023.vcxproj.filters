@@ -120,5 +120,8 @@
     <ClCompile Include="이분탐색.cpp">
       <Filter>소스 파일\Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="힙과 Compare 함수.cpp">
+      <Filter>소스 파일\Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
